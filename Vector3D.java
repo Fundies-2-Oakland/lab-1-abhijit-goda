@@ -3,10 +3,22 @@ public class Vector3D {
     double y;
     double z;
 
-    public Vector3D(double x, double y, double z) {
-        x = this.x;
-        y = this.y;
-        z = this.z;
+    public static void main (String[] args) {
+        Vector3D vector = new Vector3D(1, 2, 3);
+        System.out.println(vector.getX());
+        System.out.println(vector.getY());
+        System.out.println(vector.getZ());
+        System.out.println(vector.normalize());
+        System.out.println(vector.add(vector));
+        System.out.println(vector.multiply(3.0));
+        System.out.println(vector.angleBetween(vector));
+        System.out.println(vector.crossProduct(new Vector3D(-1, 30, 3)));
+    }
+
+    public Vector3D(double init_x, double init_y, double init_z) {
+        this.x = init_x;
+        this.y = init_y;
+        this.z = init_z;
     }
 
     @Override
@@ -19,18 +31,15 @@ public class Vector3D {
     }
 
     Double getX() {
-        System.out.println(x);
-        return x;
+        return this.x;
     }
 
     Double getY() {
-        System.out.println(y);
-        return y;
+        return this.y;
     }
 
     Double getZ() {
-        System.out.println(z);
-        return z;
+        return this.z;
     }
 
     Double getMagnitude() {
