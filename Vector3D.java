@@ -3,6 +3,12 @@ public class Vector3D {
     double y;
     double z;
 
+    public Vector3D(double init_x, double init_y, double init_z) {
+        this.x = init_x;
+        this.y = init_y;
+        this.z = init_z;
+    }
+
     public static void main (String[] args) {
         Vector3D vector = new Vector3D(1, 2, 3);
         System.out.println(vector.getX());
@@ -13,12 +19,6 @@ public class Vector3D {
         System.out.println(vector.multiply(3.0));
         System.out.println(vector.angleBetween(vector));
         System.out.println(vector.crossProduct(new Vector3D(-1, 30, 3)));
-    }
-
-    public Vector3D(double init_x, double init_y, double init_z) {
-        this.x = init_x;
-        this.y = init_y;
-        this.z = init_z;
     }
 
     @Override
